@@ -80,8 +80,8 @@ export const content = {
   // EmailJS (https://dashboard.emailjs.com): Email Services → service ID; Email Templates → template ID;
   // Account → Public Key. Safe to commit — EmailJS designs these to be public.
   emailjs: {
-    serviceId: '', // TODO
-    templateId: '', // TODO
-    publicKey: '', // TODO
+    serviceId: 'service_yowl63r',
+    templateId: 'template_wp0k00v',
+    publicKey: 'MeUTg0BPYXPshHcWg',
   },
 }
