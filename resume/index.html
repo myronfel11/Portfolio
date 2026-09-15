@@ -1,0 +1,211 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Myron Feliciano — Résumé</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=DM+Sans:ital,opsz,wght@0,9..40,400..700;1,9..40,400..700&display=swap" rel="stylesheet" />
+<style>
+  :root {
+    --ink: #1f2a24;
+    --green: #2e4b3a;
+    --green-soft: #4e7e62;
+    --caramel: #b6895b;
+    --muted: #6b7570;
+    --rule: #dfe3e0;
+    --display: 'Unbounded', sans-serif;
+    --body: 'DM Sans', system-ui, sans-serif;
+  }
+  @page { size: Letter; margin: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #fff; }
+  body {
+    font-family: var(--body);
+    color: var(--ink);
+    font-size: 9.1pt;
+    line-height: 1.36;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  .page {
+    width: 8.5in;
+    height: 11in;
+    padding: 0.45in 0.55in 0.5in;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+  }
+  a { color: inherit; text-decoration: none; }
+
+  /* Header */
+  .head { display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; padding-bottom: 12px; border-bottom: 2px solid var(--green); }
+  .name { font-family: var(--display); font-weight: 900; font-size: 26pt; line-height: 1; letter-spacing: -0.02em; color: var(--green); text-transform: uppercase; }
+  .roles { margin-top: 6px; font-family: var(--display); font-weight: 500; font-size: 8pt; letter-spacing: 0.12em; text-transform: uppercase; color: var(--caramel); }
+  .contact { text-align: right; font-size: 8.6pt; color: var(--muted); line-height: 1.55; white-space: nowrap; }
+  .contact b { color: var(--ink); font-weight: 600; }
+
+  /* Layout */
+  .grid { display: grid; grid-template-columns: 1fr 2.05in; gap: 0 0.3in; margin-top: 12px; }
+  section { margin-bottom: 10px; }
+  h2 { font-family: var(--display); font-weight: 700; font-size: 7.2pt; letter-spacing: 0.18em; text-transform: uppercase; color: var(--caramel); padding-bottom: 3px; margin-bottom: 6px; border-bottom: 1px solid var(--rule); }
+  .summary { font-size: 9.5pt; line-height: 1.45; color: var(--ink); }
+  .summary em { font-style: normal; color: var(--green); font-weight: 600; }
+
+  .job { margin-bottom: 7px; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .job-title { font-weight: 700; font-size: 9.6pt; color: var(--green); }
+  .job-org { font-weight: 500; color: var(--ink); }
+  .job-when { font-size: 8.2pt; color: var(--muted); white-space: nowrap; }
+  ul { list-style: none; margin-top: 2px; }
+  li { position: relative; padding-left: 11px; margin-bottom: 1.5px; }
+  li::before { content: ''; position: absolute; left: 0; top: 0.55em; width: 5px; height: 5px; border-radius: 50%; background: var(--caramel); }
+
+  .proj { margin-bottom: 5px; }
+  .proj-head { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+  .proj-title { font-weight: 700; color: var(--green); }
+  .proj-stack { font-size: 8.2pt; color: var(--muted); margin-top: 1px; }
+
+  /* Sidebar */
+  .side section { margin-bottom: 12px; }
+  .skill-group { margin-bottom: 6px; }
+  .skill-group b { display: block; font-size: 8pt; font-weight: 700; color: var(--green); margin-bottom: 1px; }
+  .skill-group span { font-size: 8.5pt; color: var(--ink); line-height: 1.4; }
+  .edu b { display: block; font-weight: 700; color: var(--green); }
+  .edu span { display: block; font-size: 8.5pt; }
+  .edu .muted { color: var(--muted); font-size: 8.2pt; }
+  .words { display: flex; gap: 6px; flex-wrap: wrap; margin-top: 2px; }
+  .words span { font-family: var(--display); font-size: 7pt; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: var(--green); border: 1px solid var(--green-soft); border-radius: 999px; padding: 3px 8px; }
+  .addl li { margin-bottom: 4px; font-size: 8.5pt; }
+  .addl b { color: var(--ink); font-weight: 600; }
+
+</style>
+</head>
+<body>
+<div class="page">
+  <header class="head">
+    <div>
+      <div class="name">Myron<br/>Feliciano</div>
+      <div class="roles">Web Designer · Developer · Creative Director</div>
+    </div>
+    <div class="contact">
+      <b>myronfeliciano.com</b><br/>
+      <a href="mailto:MyronLFeliciano@gmail.com">MyronLFeliciano@gmail.com</a><br/>
+      <a href="https://www.linkedin.com/in/myron-feliciano/">linkedin.com/in/myron-feliciano</a> · <a href="https://github.com/myronfel11">github.com/myronfel11</a><br/>
+      Calgary, Alberta
+    </div>
+  </header>
+
+  <div class="grid">
+    <main>
+      <section>
+        <h2>Profile</h2>
+        <p class="summary">
+          I take projects from <em>brand identity through to production code</em> — logos and guidelines,
+          interface design, and React/TypeScript builds with real API integrations — and I ship them.
+          Comfortable owning the whole arc with a client: scoping, iterating on feedback, explaining
+          technical decisions to non-technical stakeholders, and supporting the work after launch.
+        </p>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+
+        <div class="job">
+          <div class="job-head">
+            <div><span class="job-title">Creative Director &amp; Web Developer</span> <span class="job-org">· Kon’ya Japan</span></div>
+            <div class="job-when">Contract · May 2025 – Feb 2026</div>
+          </div>
+          <ul>
+            <li>Directed the brand from the ground up: designed the logo and a complete brand guideline so the identity holds together across digital and print.</li>
+            <li>Designed and built the production website in React and TypeScript, deployed on Vercel, with Clover API integration for live business functionality.</li>
+            <li>Worked in iterative, feedback-driven cycles with the owner and an API developer — scoping requirements, flagging blockers early, and translating technical decisions for a non-technical client.</li>
+            <li>Tested responsive layouts across devices and browsers before every deployment and supported the site through launch — domain, deployment, forms and third-party integrations.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div><span class="job-title">Freelance Web Developer</span> <span class="job-org">· FuwaFriends</span></div>
+            <div class="job-when">Oct 2025 – Jan 2026</div>
+          </div>
+          <ul>
+            <li>Debugged and resolved front-end and checkout workflow issues in a live ecommerce store, improving usability and the customer experience.</li>
+            <li>Gathered requirements directly from stakeholders, prioritized fixes, and kept responsive design and brand consistency intact.</li>
+          </ul>
+        </div>
+
+        <div class="job">
+          <div class="job-head">
+            <div><span class="job-title">Technology Instructor</span> <span class="job-org">· Hai Nan Community Association</span></div>
+            <div class="job-when">Jun 2024 – Sep 2024</div>
+          </div>
+          <ul>
+            <li>Taught older adults to use smartphones, laptops and tablets one-on-one with patient, step-by-step guidance — including helping Chinese- and Vietnamese-speaking participants through translation apps and language settings.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section>
+        <h2>Selected Projects</h2>
+
+        <div class="proj">
+          <div class="proj-head"><span class="proj-title">myronfeliciano.com — Portfolio</span><span class="job-when">2026</span></div>
+          <div class="proj-stack">React · Vite · GSAP · Canvas · GitHub → Hostinger auto-deploy</div>
+          <ul><li>Designed and built this site end to end — split-text hero reveal, pinned horizontal gallery, mouse-reactive particle field, custom cursor and a brand-guideline-style frame with live section numbering — with continuous deployment on every push.</li></ul>
+        </div>
+
+        <div class="proj">
+          <div class="proj-head"><span class="proj-title">Secure Authentication System</span><span class="job-when">Jan 2025</span></div>
+          <div class="proj-stack">Node.js · Express · MongoDB · JWT · Google OAuth · AWS</div>
+          <ul><li>Built a full-stack auth system with CSRF protection, Helmet and HTTPS practices; tested endpoints, token refresh and protected routes in Postman; deployed and configured on AWS.</li></ul>
+        </div>
+
+        <div class="proj">
+          <div class="proj-head"><span class="proj-title">Headless CMS Integration</span><span class="job-when">Feb 2025</span></div>
+          <div class="proj-stack">React · Vite · Sanity · REST</div>
+          <ul><li>Connected a React front end to Sanity CMS via REST; chose Vite over Next.js deliberately to understand build-tooling differences and sharpen debugging.</li></ul>
+        </div>
+
+        <div class="proj">
+          <div class="proj-head"><span class="proj-title">Authentication SDK — team project</span><span class="job-when">Feb 2025</span></div>
+          <div class="proj-stack">Git · shared codebase</div>
+          <ul><li>Led development for a scalable authentication solution, coordinating tasks and version control across the team.</li></ul>
+        </div>
+      </section>
+    </main>
+
+    <aside class="side">
+      <section>
+        <h2>Skills</h2>
+        <div class="skill-group"><b>Design &amp; direction</b><span>Brand identity, logo design, brand guidelines, art direction, UI/UX, responsive design, motion design, Figma</span></div>
+        <div class="skill-group"><b>Front end</b><span>React, TypeScript, JavaScript, HTML, CSS, Tailwind CSS, Bootstrap, GSAP, Vite, Next.js</span></div>
+        <div class="skill-group"><b>Back end &amp; platforms</b><span>Node.js, Express, REST APIs, MongoDB, SQL, Java, C#, Sanity, Contentful, Clerk, Shopify, Squarespace</span></div>
+        <div class="skill-group"><b>Tooling &amp; delivery</b><span>Git, GitHub, Postman, AWS, Vercel, Hostinger, cross-browser &amp; cross-device testing</span></div>
+      </section>
+
+      <section class="edu">
+        <h2>Education</h2>
+        <b>Diploma, Web Design &amp; Development</b>
+        <span>Southern Alberta Institute of Technology (SAIT)</span>
+        <span class="muted">Calgary · Graduated Aug 2025 · GPA 3.7</span>
+      </section>
+
+      <section>
+        <h2>How I work</h2>
+        <div class="words"><span>Grounded</span><span>Modern</span><span>Creative</span></div>
+      </section>
+
+      <section class="addl">
+        <h2>Additional Experience</h2>
+        <ul>
+          <li><b>Customs Coordinator</b>, Pacific Coast Express · Sep 2025 – Jul 2026. Resolved time-sensitive shipment and documentation issues with customers, drivers and internal teams in a deadline-driven environment.</li>
+          <li><b>Retail &amp; hospitality</b>, 2017 – 2024. Six years customer-facing at Vans / Jack &amp; Jones (Employee of the Month, multiple times) and Boston Pizza — calm, precise and fast under pressure.</li>
+        </ul>
+      </section>
+    </aside>
+  </div>
+
+</div>
+</body>
+</html>

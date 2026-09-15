@@ -68,13 +68,20 @@ export const content = {
     },
   ],
 
-  email: 'hello@example.com', // TODO
-  resumeUrl: '/resume.pdf', // TODO — drop resume.pdf into /public
+  email: 'MyronLFeliciano@gmail.com',
+  // Built from resume/index.html via resume/build-pdf.ps1
+  resumeUrl: '/Myron-Feliciano-Resume.pdf',
   socials: [
-    // TODO — replace hrefs
-    { label: 'LinkedIn', href: '#' },
-    { label: 'GitHub', href: '#' },
-    { label: 'Dribbble', href: '#' },
-    { label: 'Instagram', href: '#' },
+    { label: 'LinkedIn', href: 'https://www.linkedin.com/in/myron-feliciano/' },
+    { label: 'GitHub', href: 'https://github.com/myronfel11' },
+    { label: 'Instagram', href: 'https://www.instagram.com/myronfeliciano' },
   ],
+
+  // EmailJS (https://dashboard.emailjs.com): Email Services → service ID; Email Templates → template ID;
+  // Account → Public Key. Safe to commit — EmailJS designs these to be public.
+  emailjs: {
+    serviceId: '', // TODO
+    templateId: '', // TODO
+    publicKey: '', // TODO
+  },
 }

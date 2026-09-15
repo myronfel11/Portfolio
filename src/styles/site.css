@@ -802,6 +802,180 @@ body.has-custom-cursor * {
   transform: translate(3px, -3px);
 }
 
+/* ---------- Contact modal ---------- */
+
+.modal-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 200;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--gutter);
+  background: rgba(20, 34, 27, 0.7);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  animation: fade-in 0.3s ease both;
+}
+
+.modal {
+  position: relative;
+  width: min(560px, 100%);
+  max-height: calc(100vh - 2 * var(--gutter));
+  overflow-y: auto;
+  padding: clamp(1.75rem, 4vw, 2.75rem);
+  border-radius: 1.5rem;
+  background: var(--green-deep);
+  border: 1px solid var(--line);
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.35);
+  animation: modal-in 0.5s var(--ease-out-expo) both;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+}
+
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.98);
+  }
+}
+
+.modal-close {
+  position: absolute;
+  top: 1rem;
+  right: 1.1rem;
+  width: 2.4rem;
+  height: 2.4rem;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  line-height: 1;
+  color: var(--silver);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.modal-close:hover {
+  background: var(--caramel);
+  color: var(--green-deep);
+}
+
+.modal-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.1;
+  color: var(--silver-light);
+  margin-top: 0.6rem;
+}
+
+.modal-title em {
+  font-style: normal;
+  color: var(--caramel);
+}
+
+.modal-sub,
+.modal-note,
+.modal-error {
+  margin-top: 1rem;
+  color: var(--silver-dim);
+  font-size: 0.95rem;
+}
+
+.modal-note {
+  padding: 0.75rem 1rem;
+  border-radius: 0.75rem;
+  border: 1px dashed var(--silver-dim);
+}
+
+.modal-error {
+  color: var(--caramel-light);
+}
+
+.modal-form {
+  display: grid;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.modal-form label {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.modal-form label span {
+  font-size: 0.7rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  font-weight: 600;
+}
+
+.modal-form input,
+.modal-form textarea {
+  font: inherit;
+  color: var(--silver-light);
+  background: rgba(193, 193, 193, 0.06);
+  border: 1px solid var(--line);
+  border-radius: 0.75rem;
+  padding: 0.8rem 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, background 0.3s ease;
+  resize: vertical;
+}
+
+.modal-form input:focus,
+.modal-form textarea:focus {
+  border-color: var(--caramel);
+  background: rgba(193, 193, 193, 0.1);
+}
+
+.modal-form .hp {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.modal-actions {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.modal-actions .btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.modal-direct {
+  font-size: 0.85rem;
+  color: var(--silver-dim);
+  border-bottom: 1px solid transparent;
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.modal-direct:hover {
+  color: var(--silver-light);
+  border-color: var(--caramel);
+}
+
+.modal-sent .btn {
+  margin-top: 1.5rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .modal-backdrop,
+  .modal {
+    animation: none;
+  }
+}
+
 /* ---------- Responsive ---------- */
 
 @media (max-width: 1024px) {
