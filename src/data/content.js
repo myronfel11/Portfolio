@@ -1,9 +1,12 @@
 // Single source of truth for all editable copy. Replace the TODO values with real content.
 
 export const content = {
-  name: 'Your Name', // TODO
-  initials: 'YN', // TODO
-  location: 'Somewhere great', // TODO — city / region
+  name: 'Myron Feliciano',
+  initials: 'MF',
+  location: 'Calgary, Alberta',
+  // Downscaled from the originals in /public (Gold_logo.png, Gold_Wordmark.png)
+  logo: '/logo-mark.png',
+  wordmark: '/logo-wordmark.png',
   // Drop your photo into /public and set the path, e.g. '/headshot.jpg'. Leave empty for the placeholder.
   headshot: '', // TODO
   tagline:

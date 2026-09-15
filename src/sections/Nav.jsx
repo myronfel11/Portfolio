@@ -37,7 +37,7 @@ export default function Nav() {
             ))}
         </nav>
         <a href="#top" className="bar-logo" onClick={(e) => scrollTo(e, 'top')}>
-          <LogoMark size={40} />
+          <LogoMark variant="mark" />
         </a>
       </div>
     </header>

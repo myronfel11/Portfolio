@@ -25,8 +25,7 @@ export default function BottomBar() {
     <div ref={ref} className="bar bar-bottom" style={{ opacity: 0 }}>
       <div className="container bar-inner">
         <a href="#top" className="bar-brand" onClick={(e) => scrollTo(e, 'top')}>
-          <LogoMark size={32} />
-          <span className="bar-brand-name">{content.name}</span>
+          <LogoMark variant="wordmark" />
         </a>
         <div className="bar-meta">
           <span>

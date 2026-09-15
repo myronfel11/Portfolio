@@ -100,37 +100,30 @@ body.has-custom-cursor * {
   white-space: nowrap;
 }
 
-.logo-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  border: 1.5px dashed var(--silver-dim);
-  font-family: var(--font-display);
-  font-weight: 900;
-  color: var(--caramel);
-  line-height: 1;
-  transition: border-color 0.3s ease, transform 0.5s var(--ease-out-expo);
+.logo-img {
+  display: block;
+  width: auto;
+  transition: transform 0.5s var(--ease-out-expo), filter 0.3s ease;
 }
 
-.bar-logo:hover .logo-mark,
-.bar-brand:hover .logo-mark {
-  border-color: var(--caramel);
-  transform: rotate(-8deg);
+.bar-top .logo-img {
+  height: 36px;
 }
 
+.bar-bottom .logo-img {
+  height: 50px;
+}
+
+.bar-logo,
 .bar-brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.75rem;
 }
 
-.bar-brand-name {
-  font-family: var(--font-display);
-  font-weight: 700;
-  font-size: 0.85rem;
-  color: var(--silver-light);
-  white-space: nowrap;
+.bar-logo:hover .logo-img,
+.bar-brand:hover .logo-img {
+  transform: scale(1.06);
+  filter: brightness(1.15);
 }
 
 .bar-meta {
@@ -916,8 +909,12 @@ body.has-custom-cursor * {
     display: none;
   }
 
-  .bar-brand-name {
-    font-size: 0.75rem;
+  .bar-top .logo-img {
+    height: 30px;
+  }
+
+  .bar-bottom .logo-img {
+    height: 36px;
   }
 
   .section-counter-num {
