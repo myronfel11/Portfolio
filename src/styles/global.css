@@ -1,0 +1,123 @@
+@import './tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--green-deep);
+  color: var(--silver);
+  font-family: var(--font-body);
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+::selection {
+  background: var(--caramel);
+  color: var(--green-deep);
+}
+
+.container {
+  width: min(var(--container), 100% - 2 * var(--gutter));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: clamp(5rem, 12vw, 9rem);
+}
+
+.eyebrow {
+  font-size: 0.75rem;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--caramel);
+  font-weight: 600;
+}
+
+.h2 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.75rem);
+  line-height: 1.05;
+  letter-spacing: -0.02em;
+  color: var(--silver-light);
+  margin-top: 0.75rem;
+}
+
+.h2 em {
+  font-style: normal;
+  color: var(--caramel);
+}
+
+/* Elements animated in by GSAP start hidden to avoid a flash before JS runs */
+[data-reveal] {
+  opacity: 0;
+}
+
+.btn {
+  display: inline-block;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.82rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 1.1rem 2rem;
+  border-radius: 999px;
+  background: var(--caramel);
+  color: var(--green-deep);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background: var(--silver-light);
+}
+
+.btn.ghost {
+  background: transparent;
+  color: var(--silver);
+  box-shadow: inset 0 0 0 1.5px var(--silver-dim);
+}
+
+.btn.ghost:hover {
+  color: var(--green-deep);
+  background: var(--silver);
+}
+
+.btn.big {
+  padding: 1.5rem 3rem;
+  font-size: 1rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
