@@ -13,8 +13,8 @@ export const content = {
     'I design, build and direct digital experiences that feel like the people behind them.', // TODO
 
   roles: ['Web Designer', 'Developer', 'Creative Director'],
-  // Hero headline, one entry per line
-  titleLines: ['Web Designer.', 'Developer.', 'Creative', 'Director.'],
+  // Hero headline, one entry per line. A line with several segments breaks between them on mobile only.
+  titleLines: [['Web', 'Designer.'], ['Developer.'], ['Creative'], ['Director.']],
 
   bio: [
     // TODO — replace with your real bio paragraphs

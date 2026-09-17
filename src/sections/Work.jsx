@@ -1,6 +1,7 @@
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
+import ArrowIcon from '../components/ArrowIcon.jsx'
 import { content } from '../data/content.js'
 import { prefersReducedMotion } from '../lib/motion.js'
 
@@ -59,8 +60,8 @@ export default function Work() {
           >
             <span className="work-card-fill" aria-hidden />
             <span className="work-card-num">{String(i + 1).padStart(2, '0')}</span>
-            <span className="work-card-arrow" aria-hidden>
-              ↗
+            <span className="work-card-arrow">
+              <ArrowIcon />
             </span>
             <div className="work-card-body">
               <span className="work-card-meta">

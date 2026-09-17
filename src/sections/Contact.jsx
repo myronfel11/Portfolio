@@ -1,6 +1,7 @@
 import { useCallback, useRef, useState } from 'react'
 import Magnetic from '../components/Magnetic.jsx'
 import ContactModal from '../components/ContactModal.jsx'
+import ArrowIcon from '../components/ArrowIcon.jsx'
 import { content } from '../data/content.js'
 import { useReveal } from '../hooks/useReveal.js'
 
@@ -26,7 +27,8 @@ export default function Contact() {
         <div className="contact-actions" data-reveal>
           <Magnetic strength={0.4}>
             <button type="button" className="btn big" onClick={() => setOpen(true)}>
-              {content.email}
+              <span className="label-desktop">{content.email}</span>
+              <span className="label-mobile">Email me</span>
             </button>
           </Magnetic>
           <Magnetic strength={0.3}>
@@ -40,7 +42,7 @@ export default function Contact() {
           {content.socials.map((s) => (
             <li key={s.label}>
               <a href={s.href} target="_blank" rel="noreferrer" className="social-link">
-                {s.label} <span aria-hidden>↗</span>
+                {s.label} <ArrowIcon />
               </a>
             </li>
           ))}

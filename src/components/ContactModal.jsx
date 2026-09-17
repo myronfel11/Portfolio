@@ -1,5 +1,6 @@
 import { useEffect, useRef, useState } from 'react'
 import emailjs from '@emailjs/browser'
+import ArrowIcon from './ArrowIcon.jsx'
 import { content } from '../data/content.js'
 
 const configured = () => {
@@ -110,7 +111,7 @@ export default function ContactModal({ open, onClose }) {
                   {status === 'sending' ? 'Sending…' : 'Send message'}
                 </button>
                 <a href={`mailto:${content.email}`} className="modal-direct">
-                  or email me directly ↗
+                  or email me directly <ArrowIcon />
                 </a>
               </div>
             </form>

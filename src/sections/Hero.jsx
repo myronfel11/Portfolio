@@ -38,9 +38,14 @@ export default function Hero() {
     <section ref={root} id="top" className="hero container">
       <p className="eyebrow hero-eyebrow hero-fade">Hi, I'm {content.name}</p>
       <h1 className="hero-title">
-        {content.titleLines.map((line) => (
-          <span key={line} className="hero-line">
-            <SplitChars text={line} />
+        {content.titleLines.map((segments) => (
+          <span key={segments.join(' ')} className="hero-line">
+            {segments.map((seg, i) => (
+              <span key={seg} className="hero-seg">
+                {i > 0 && <span className="hero-seg-gap"> </span>}
+                <SplitChars text={seg} />
+              </span>
+            ))}
           </span>
         ))}
       </h1>
