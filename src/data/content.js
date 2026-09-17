@@ -29,7 +29,10 @@ export const content = {
   ],
 
   projects: [
-    // TODO — replace with real projects. `tone` controls card color: 'caramel' | 'silver' | 'green'
+    // TODO — replace with real projects. `tone` controls the card's accent: 'caramel' | 'silver' | 'green'
+    // `image` is the still (e.g. '/work/konya.jpg'); `video` is a short muted clip that plays on hover
+    // (e.g. '/work/konya.mp4' — keep it ~5–10 s, no audio, under ~3 MB). Both live in /public/work.
+    // Leave either empty to fall back to the tone color / no video.
     {
       title: 'Project One',
       category: 'Brand & Web',
@@ -38,6 +41,8 @@ export const content = {
       tags: ['Design', 'Development'],
       href: '#',
       tone: 'caramel',
+      image: '',
+      video: '',
     },
     {
       title: 'Project Two',
@@ -47,6 +52,8 @@ export const content = {
       tags: ['UI/UX', 'React'],
       href: '#',
       tone: 'silver',
+      image: '',
+      video: '',
     },
     {
       title: 'Project Three',
@@ -56,6 +63,8 @@ export const content = {
       tags: ['Creative Direction', 'Motion'],
       href: '#',
       tone: 'green',
+      image: '',
+      video: '',
     },
     {
       title: 'Project Four',
@@ -65,6 +74,8 @@ export const content = {
       tags: ['Branding', 'Web'],
       href: '#',
       tone: 'caramel',
+      image: '',
+      video: '',
     },
   ],
 

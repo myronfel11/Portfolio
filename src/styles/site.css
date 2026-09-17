@@ -409,44 +409,150 @@ body.has-custom-cursor * {
 .work-card.tone-caramel {
   background: var(--caramel);
   color: var(--green-deep);
+  --tone: var(--caramel);
+  --tone-light: var(--caramel-light);
 }
 
 .work-card.tone-silver {
   background: var(--silver);
   color: var(--green-deep);
+  --tone: var(--silver);
+  --tone-light: var(--silver-light);
 }
 
 .work-card.tone-green {
   background: var(--green);
   color: var(--silver-light);
+  --tone: var(--green);
+  --tone-light: var(--green-soft);
 }
 
-.work-card-fill {
+/* Media layer: still image, hover video, tone tint, legibility shade */
+.work-media {
   position: absolute;
   inset: 0;
-  transform: translateY(101%);
-  transition: transform 0.6s var(--ease-in-out-quart);
+  overflow: hidden;
 }
 
-.work-card:hover .work-card-fill {
-  transform: translateY(0);
+.work-media img,
+.work-media video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.tone-caramel .work-card-fill {
-  background: var(--caramel-light);
+.work-video {
+  opacity: 0;
 }
 
-.tone-silver .work-card-fill {
-  background: var(--silver-light);
+.work-tint {
+  position: absolute;
+  inset: 0;
+  background: var(--tone-light);
+  opacity: 0;
 }
 
-.tone-green .work-card-fill {
-  background: var(--green-soft);
+.work-card.is-touch .work-tint,
+.work-card.is-static .work-tint {
+  display: none;
+}
+
+.work-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(16, 28, 21, 0.75) 0%, rgba(16, 28, 21, 0.25) 45%, transparent 70%);
+  opacity: 0;
+}
+
+.work-card:has(.work-media img) {
+  color: var(--silver-light);
+}
+
+.work-card:has(.work-media img) .work-shade {
+  opacity: 1;
+}
+
+.work-card:has(.work-media img) .work-card-tags li {
+  border-color: rgba(233, 233, 233, 0.5);
 }
 
 .work-card-body {
   position: relative;
   z-index: 1;
+  transform-origin: left bottom;
+}
+
+/* Ring that closes in, then the pill that grows out of it */
+.work-ring {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  translate: -50% -50%;
+  border-radius: 50%;
+  border: 2px solid var(--caramel);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.work-pill {
+  position: absolute;
+  z-index: 2;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 16px;
+  height: 16px;
+  padding: 0;
+  border-radius: 999px;
+  background: var(--caramel);
+  color: var(--green-deep);
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.8rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  opacity: 0;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.work-pill span {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  opacity: 0;
+}
+
+/* Touch + reduced-motion fallbacks: pill just sits there */
+.work-card.is-touch .work-pill,
+.work-card.is-static:hover .work-pill {
+  width: auto;
+  height: 48px;
+  padding: 0 1.6rem;
+  opacity: 1;
+}
+
+.work-card.is-touch .work-pill span,
+.work-card.is-static:hover .work-pill span {
+  opacity: 1;
+}
+
+.work-card.is-touch .work-video {
+  opacity: 1;
+}
+
+.work-card.is-static:hover .work-video {
+  opacity: 1;
+  transition: opacity 0.4s ease;
 }
 
 .work-card-num {
